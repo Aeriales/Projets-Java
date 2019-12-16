@@ -16,12 +16,12 @@ public class main {
                 System.out.println("Vous n'avez pas choisi l'un de mes modes de conversion");
             } else {
                 System.out.println("Quel température souhaitez-vous convertir?");
-                int temp = sc.nextInt();
+                float temp = sc.nextFloat();
                 if (mode == 1) {
                     float tempf = ((((float) (9) / (float) (5))) * temp) + 32;
                     System.out.println("La conversion a été effectuée: " + temp + " degrés Celsius correspondent à " + tempf + " degrés Farenheit");
                 } else {
-                    float tempc = (((float) (temp) - 32) * 5) / 9;
+                    float tempc = ((temp - 32) * 5) / 9;
                     System.out.println("La conversion a été effectuée: " + temp + " degrés Farenheit correspondent à " + tempc + " degrés Celsius");
                 }
             }
@@ -34,29 +34,3 @@ public class main {
         System.out.println("Au revoir!");
         }
     }
-public class Sdz1 {
-
-    public static void main(String[] args)
-    {
-        String[] tab = {"toto", "tata", "titi", "tete"};
-        parcourirTableau(tab);
-        System.out.println(toString(tab));
-    }
-
-    static void parcourirTableau(String[] tab)
-    {
-        for(String str : tab)
-            System.out.println(str);
-    }
-
-    static String toString(String[] tab)
-    {
-        System.out.println("Méthode toString() !\n----------");
-        String retour = "";
-
-        for(String str : tab)
-            retour += str + "\n";
-
-        return retour;
-    }
-}
